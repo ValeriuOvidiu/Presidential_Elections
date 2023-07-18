@@ -1,4 +1,4 @@
- {% extends "vote/base.html" %}
+{% extends "vote/base.html" %}
 {% block content %}
 <div class="card" style="width: 18rem;position:absolute; top:70px; left:100px;z-index:1">
   <div class="card-header">
@@ -6,25 +6,24 @@
   </div>
   <div class="card-body">
     <ul class="list-group">
-    {% for i in candidates_list %}
-    <li class="list-group-item"><a href={% url "candidate/profile" i.candidate.username %}>{{i.candidate.first_name}}
-        {{i.candidate.last_name}}</a></li>
-    {% endfor %}
+      {% for i in candidates_list %}
+      <li class="list-group-item"><a href={% url "candidate/profile" i.candidate.username %}>{{i.candidate.first_name}}
+          {{i.candidate.last_name}}</a></li>
+      {% endfor %}
     </ul>
   </div>
 </div>
 <div class="card" style="width: 24rem;position:absolute; top:70px; left:400px;z-index:1">
   <div class="card-header">
     <h1>Top Candidates</h1>
-  </div>  
+  </div>
   <div class="card-body">
     <ul class="list-group">
-    {% for i in top_list %}
-    <li class="list-group-item"><a href={% url "candidate/profile" i.candidate.username %}>{{i.candidate.first_name}}
-        {{i.candidate.last_name}} number of votes: {{i.num_votes}}</a></li>
-    {% endfor %}
+      {% for i in top_list %}
+      <li class="list-group-item"><a href={% url "candidate/profile" i.candidate.username %}>{{i.candidate.first_name}}
+          {{i.candidate.last_name}} number of votes: {{i.num_votes}}</a></li>
+      {% endfor %}
     </ul>
   </div>
 </div>
 {% endblock %}
- 

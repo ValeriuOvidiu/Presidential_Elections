@@ -1,17 +1,18 @@
 {% extends "vote/base.html" %}
 {% block content %}
-    <div class="card" style="width: 50rem;position:absolute; top:70px; left:300px;z-index:1">
-      <div class="card-header">
-        <h1 >{{user.first_name}} {{user.last_name}}</h1>
-      </div>
-      <div class="card-body">
-  <h3>{{bio}}</h3>
-      </div>
-      <div class="card-footer bg-transparent border-success">
-   <a class="btn btn-primary mb-3"  role="button" href={% url 'voteCandidate' user.username %}> {{vote_or_change_vote}}</a>
-  <h3 > Number of Votes {{votes}}</h3>
-      </div>
-      </div>
-    </div>
-    </div>
-    {% endblock %}
+<div class="card" style="width: 50rem;position:absolute; top:70px; left:300px;z-index:1">
+  <div class="card-header">
+    <h1>{{user.first_name}} {{user.last_name}}</h1>
+  </div>
+  <div class="card-body">
+    <h3>{{bio}}</h3>
+  </div>
+  <div class="card-footer bg-transparent border-success">
+    <a class="btn btn-primary mb-3" role="button" href={% url 'voteCandidate' user.username %}>
+      {{vote_or_change_vote}}</a>
+    <h3> Number of Votes {{votes}}</h3>
+  </div>
+</div>
+</div>
+</div>
+{% endblock %}
